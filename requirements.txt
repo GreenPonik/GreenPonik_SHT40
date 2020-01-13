@@ -1,0 +1,1 @@
+adafruit-circuitpython-tsl2561==3.2.2
