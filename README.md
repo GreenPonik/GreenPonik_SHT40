@@ -5,7 +5,7 @@ This is the sample code for read light with TSL2561 sensor.
 
 ## Table of Contents
 
-- [## GreenPonik_OneWire_DS18B20.py Library for Raspberry pi](#GreenPonikOneWireDS18B20py-library-for-raspberry-pi)
+- [GreenPonik_TSL2561.py Library for Raspberry pi](#GreenPoniktsl2561py-library-for-raspberry-pi)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Methods](#methods)
