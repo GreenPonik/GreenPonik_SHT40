@@ -51,7 +51,4 @@ if __name__ == "__main__":
 ```
 
 ## Credits
-Writter by Mickael Lehoux, from [GreenPonik](https://www.greenponik.com), 2019
-
-## support us
-[become a patreon](https://www.patreon.com/bePatron?u=32614023)
+Write by Mickael Lehoux, from [GreenPonik](https://www.greenponik.com), 2019
