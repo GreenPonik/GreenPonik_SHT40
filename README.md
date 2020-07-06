@@ -1,3 +1,13 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_TSL2561&metric=alert_status)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_TSL2561&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561)
+
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_TSL2561&metric=ncloc)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_TSL2561&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561)
+
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_TSL2561&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_TSL2561&metric=security_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_TSL2561&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561)
+
 ## GreenPonik_TSL2561.py Library for Raspberry pi
 ---------------------------------------------------------
 This is the sample code for read light with TSL2561 sensor.
