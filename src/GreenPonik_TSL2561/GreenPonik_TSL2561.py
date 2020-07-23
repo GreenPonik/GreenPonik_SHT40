@@ -9,7 +9,7 @@ i2c = busio.I2C(board.SCL, board.SDA)
 tsl = adafruit_tsl2561.TSL2561(i2c)
 
 
-def read_tsl2561(self):
+def read_tsl2561():
     # Print chip info
     print("Chip ID = {}".format(tsl.chip_id))
     print("Enabled = {}".format(tsl.enabled))
