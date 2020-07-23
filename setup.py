@@ -15,6 +15,8 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/GreenPonik/GreenPonik_TSL2561",
+    license="MIT",
+    install_requires=["adafruit-circuitpython-tsl2561"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
@@ -27,5 +29,6 @@ setup(
         'Source': 'https://github.com/GreenPonik/GreenPonik_TSL2561/',
         'Bug Reports': 'https://github.com/GreenPonik/GreenPonik_TSL2561/issues',
     },
+    keywords="GreenPonik hydroponics tsl2561 light reader python hardware diy iot raspberry pi",
     py_modules=["GreenPonik_TSL2561"],
 )
