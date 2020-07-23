@@ -7,7 +7,7 @@ here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
-    name="GreenPonik_TSL2561",
+    name="greenponik-tsl2561",
     version="0.0.1",
     author="GreenPonik SAS",
     author_email="mickael.lehoux@greenponik.com",
@@ -27,4 +27,5 @@ setup(
         'Source': 'https://github.com/GreenPonik/GreenPonik_TSL2561/',
         'Bug Reports': 'https://github.com/GreenPonik/GreenPonik_TSL2561/issues',
     },
+    py_modules=["GreenPonik_TSL2561"],
 )
