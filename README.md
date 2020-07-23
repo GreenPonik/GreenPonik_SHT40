@@ -30,6 +30,9 @@ git clone https://github.com/GreenPonik/GreenPonik_TSL2561.git
 cd GreenPonik_TSL2561
 pip3 install -r requirements.txt
 
+or 
+
+> pip3 install greenponik-tsl2561
 ```
 ```Python
 
