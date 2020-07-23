@@ -33,7 +33,7 @@ pip3 install -r requirements.txt
 ```
 ```Python
 
-from GreenPonik_TSL2561 import read_tsl2561
+from GreenPonik_TSL2561.GreenPonik_TSL2561 import read_tsl2561
 
 ```
 
@@ -50,7 +50,7 @@ def read_tsl2561():
 ## Example
 ```Python
 import time
-from GreenPonik_TSL2561 import read_tsl2561
+from GreenPonik_TSL2561.GreenPonik_TSL2561 import read_tsl2561
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
-import pathlib
 import os
+import pathlib
 
 here = pathlib.Path(__file__).parent.resolve()
 
@@ -10,7 +10,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 def load_version():
     version_file = os.path.join(os.path.dirname(
-        __file__), "src/GreenPonik_OneWire_DS18B20", "version.py")
+        __file__), "src/GreenPonik_TSL2561", "version.py")
     version = {}
     with open(version_file) as fd:
         exec(fd.read(), version)

@@ -8,3 +8,8 @@ include LICENSE.txt
 
 # Include the data files
 recursive-include data *
+
+include *.txt
+include LICENSE
+recursive-include example *.py
+include *.py
