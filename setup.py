@@ -1,9 +1,12 @@
-import setuptools
+from setuptools import setup, find_packages
+import pathlib
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+here = pathlib.Path(__file__).parent.resolve()
 
-setuptools.setup(
+# Get the long description from the README file
+long_description = (here / 'README.md').read_text(encoding='utf-8')
+
+setup(
     name="GreenPonik_TSL2561",
     version="0.0.1",
     author="GreenPonik SAS",
@@ -12,11 +15,16 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/GreenPonik/GreenPonik_TSL2561",
-    packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    package_dir={'': 'src'},  # Optional
+    packages=find_packages(where='src'),  # Required
     python_requires='>=3.6',
+    project_urls={  # Optional
+        'Source': 'https://github.com/GreenPonik/GreenPonik_TSL2561/',
+        'Bug Reports': 'https://github.com/GreenPonik/GreenPonik_TSL2561/issues',
+    },
 )

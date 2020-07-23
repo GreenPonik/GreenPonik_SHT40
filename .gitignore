@@ -1,4 +1,14 @@
-!libs/__init__.py
-libs/
-
+# general things to ignore
+build/
+dist/
+*.egg-info/
+*.egg
+*.py[cod]
+__pycache__/
 *.pyc
+*.so
+*~
+
+# due to using tox and pytest
+.tox
+.cache
