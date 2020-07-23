@@ -1,6 +1,8 @@
 from setuptools import setup, find_packages
 import os
 import pathlib
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.realpath(__file__)), "src"))
 
 here = pathlib.Path(__file__).parent.resolve()
 
@@ -33,8 +35,8 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={'': 'src'},  # Optional
     packages=find_packages(where='src'),  # Required
+    package_dir={'': 'src'},  # Optional
     python_requires='>=3.6',
     project_urls={  # Optional
         'Source': 'https://github.com/GreenPonik/GreenPonik_TSL2561/',

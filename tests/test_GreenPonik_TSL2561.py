@@ -4,7 +4,7 @@
 
 import unittest
 
-from GreenPonik_TSL2561 import read_tsl2561
+from GreenPonik_TSL2561.GreenPonik_TSL2561 import read_tsl2561
 
 
 class TestGreenPonik_2561(unittest.TestCase):

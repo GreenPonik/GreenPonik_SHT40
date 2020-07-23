@@ -1,5 +1,5 @@
 import time
-from GreenPonik_TSL2561 import read_tsl2561
+from GreenPonik_TSL2561.GreenPonik_TSL2561 import read_tsl2561
 
 if __name__ == "__main__":
     while True:
