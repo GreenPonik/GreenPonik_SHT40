@@ -8,6 +8,10 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_TSL2561&metric=security_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_TSL2561&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561)
 
+
+![Upload Python Package](https://github.com/GreenPonik/GreenPonik_TSL2561/workflows/Upload%20Python%20Package/badge.svg?event=release)
+
+
 ## GreenPonik_TSL2561.py Library for Raspberry pi
 ---------------------------------------------------------
 This is the sample code for read light with TSL2561 sensor.
