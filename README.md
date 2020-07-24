@@ -25,8 +25,7 @@ This is the sample code for read light with TSL2561 sensor.
 - [Methods](#methods)
 - [Examples](#examples)
 - [Credits](#credits)
-<snippet>
-<content>
+
 
 ## Installation
 ```shell
