@@ -1,0 +1,55 @@
+\href{https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561}{\texttt{ }} \href{https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561}{\texttt{ }}
+
+\href{https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561}{\texttt{ }} \href{https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561}{\texttt{ }}
+
+\href{https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561}{\texttt{ }} \href{https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561}{\texttt{ }} \href{https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_TSL2561}{\texttt{ }}
+
+\hypertarget{md__r_e_a_d_m_e_autotoc_md0}{}\doxysubsection{\#\# Green\+Ponik\+\_\+\+T\+S\+L2561.\+py Library for Raspberry pi}\label{md__r_e_a_d_m_e_autotoc_md0}
+This is the sample code for read light with T\+S\+L2561 sensor.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysubsection{Table of Contents}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item \href{\#GreenPoniktsl2561py-library-for-raspberry-pi}{\texttt{ Green\+Ponik\+\_\+\+T\+S\+L2561.\+py Library for Raspberry pi}}
+\item \href{\#table-of-contents}{\texttt{ Table of Contents}}
+\item \href{\#installation}{\texttt{ Installation}}
+\item \href{\#methods}{\texttt{ Methods}}
+\item \href{\#examples}{\texttt{ Examples}}
+\item \href{\#credits}{\texttt{ Credits}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{Installation}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{> git clone https://github.com/GreenPonik/GreenPonik\_TSL2561.git}
+\DoxyCodeLine{cd GreenPonik\_TSL2561}
+\DoxyCodeLine{pip3 install -\/r requirements.txt}
+\DoxyCodeLine{}
+\DoxyCodeLine{or }
+\DoxyCodeLine{}
+\DoxyCodeLine{> pip3 install greenponik-\/tsl2561}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{from GreenPonik\_TSL2561 import read\_tsl2561}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{Methods}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"""}
+\DoxyCodeLine{Get light data}
+\DoxyCodeLine{"""}
+\DoxyCodeLine{def read\_tsl2561():}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{Example}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import time}
+\DoxyCodeLine{from GreenPonik\_TSL2561 import read\_tsl2561}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{if \_\_name\_\_ == "\_\_main\_\_":}
+\DoxyCodeLine{    while True:}
+\DoxyCodeLine{        read\_tsl2561()}
+\DoxyCodeLine{        time.sleep(1)}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{Credits}\label{md__r_e_a_d_m_e_autotoc_md5}
+Write by Mickael Lehoux, from \href{https://www.greenponik.com}{\texttt{ Green\+Ponik}}, 2019 
