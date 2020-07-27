@@ -4,10 +4,10 @@
 
 import unittest
 
-from GreenPonik_TSL2561.GreenPonik_TSL2561 import read_tsl2561
+from GreenPonik_TSL2561 import read_tsl2561
 
 
-class TestGreenPonik_2561(unittest.TestCase):
+class TestGreenPonik_TSL2561(unittest.TestCase):
 
     def test_read_tsl2561(self):
         self.assertListEqual(read_tsl2561())
