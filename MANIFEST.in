@@ -18,3 +18,14 @@ recursive-include src *.py
 # added by check_manifest.py
 include tox.ini
 recursive-include tests *.py
+
+# added by check_manifest.py
+include Doxyfile
+recursive-include docs *.bat
+recursive-include docs *.css
+recursive-include docs *.html
+recursive-include docs *.js
+recursive-include docs *.png
+recursive-include docs *.sty
+recursive-include docs *.tex
+recursive-include docs Makefile
