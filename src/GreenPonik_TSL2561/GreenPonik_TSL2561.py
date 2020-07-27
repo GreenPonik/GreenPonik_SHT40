@@ -6,9 +6,7 @@ import adafruit_tsl2561
 
 def read_tsl2561():
     """
-    Read tsl 2561 sensor on raspberry pi i2c bus
-    """
-    """
+    @brief Read tsl 2561 sensor on raspberry pi i2c bus
     Get light spectre data
     """
     try:
