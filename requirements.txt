@@ -1,2 +1,1 @@
 adafruit-circuitpython-tsl2561==3.2.2
-greenponik-tsl2561==0.0.1

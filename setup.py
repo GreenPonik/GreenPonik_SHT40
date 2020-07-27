@@ -29,7 +29,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/GreenPonik/GreenPonik_TSL2561",
     license="MIT",
-    install_requires=["board, busio, adafruit-circuitpython-tsl2561"],
+    install_requires=["board", "busio", "adafruit-circuitpython-tsl2561"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
