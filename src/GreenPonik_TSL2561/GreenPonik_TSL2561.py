@@ -51,7 +51,8 @@ def read_tsl2561():
         # if lux is not None:
         #    print("Lux = {}".format(lux))
         # else:
-        #    print("Lux value is None. Possible sensor underrange or overrange.")
+        #    print("Lux value is None. Possible \
+        # sensor underrange or overrange.")
         # Disble the light sensor (to save power)
         tsl.enabled = False
         print('read light data: ')
