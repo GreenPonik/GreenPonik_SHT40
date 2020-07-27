@@ -29,7 +29,7 @@ This is the sample code for read light with TSL2561 sensor.
 
 ## Installation
 ```shell
-git clone https://github.com/GreenPonik/GreenPonik_TSL2561.git
+> git clone https://github.com/GreenPonik/GreenPonik_TSL2561.git
 cd GreenPonik_TSL2561
 pip3 install -r requirements.txt
 
@@ -39,7 +39,7 @@ or
 ```
 ```Python
 
-from GreenPonik_TSL2561.GreenPonik_TSL2561 import read_tsl2561
+from GreenPonik_TSL2561 import read_tsl2561
 
 ```
 
@@ -56,7 +56,7 @@ def read_tsl2561():
 ## Example
 ```Python
 import time
-from GreenPonik_TSL2561.GreenPonik_TSL2561 import read_tsl2561
+from GreenPonik_TSL2561 import read_tsl2561
 
 
 if __name__ == "__main__":
