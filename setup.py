@@ -10,7 +10,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 def load_version():
     version_file = os.path.join(
-        os.path.dirname(__file__), "GreenPonik_TSL2561", "version.py"
+        os.path.dirname(__file__), "GreenPonik_TSL2561/", "version.py"
     )
     version = {}
     with open(version_file) as fd:
