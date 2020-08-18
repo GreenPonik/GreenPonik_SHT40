@@ -10,6 +10,7 @@
 
 
 ![Upload Python Package](https://github.com/GreenPonik/GreenPonik_TSL2561/workflows/Upload%20Python%20Package/badge.svg?event=release)
+![Python package](https://github.com/GreenPonik/GreenPonik_TSL2561/workflows/Python%20package/badge.svg?event=push)
 
 
 ## GreenPonik_TSL2561.py Library for Raspberry pi
