@@ -2,9 +2,9 @@
 # testing in general, but rather to support the `find_packages` example in
 # setup.py that excludes installing the "tests" package
 
+import sys
 import unittest
 from unittest.mock import patch, MagicMock
-import sys
 
 
 class BoardMock:
@@ -26,9 +26,6 @@ class BusioMock(MagicMock()):
 
 sys.modules["board"] = BoardMock()
 sys.modules["busio"] = BusioMock()
-
-
-from GreenPonik_TSL2561.GreenPonik_TSL2561 import read_tsl2561
 
 
 class TestGreenPonik_TSL2561(unittest.TestCase):

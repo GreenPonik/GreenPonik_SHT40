@@ -1,1 +1,7 @@
+adafruit-blinka>=5.2.3
 adafruit-circuitpython-tsl2561==3.2.2
+tox==3.18.0
+twine==3.2.0
+pytest==5.4.3
+flake8==3.8.3
+check-manifest==0.42
