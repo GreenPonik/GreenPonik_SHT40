@@ -29,12 +29,12 @@ sys.modules["busio"] = BusioMock()
 
 
 class TestGreenPonik_BH1750(unittest.TestCase):
-    @patch("GreenPonik_BH1750.GreenPonik_BH1750.read_bh1750")
-    def test_read_bh1750(self, MockBH):
-        bh = MockBH()
+    @patch("GreenPonik_BME280.GreenPonik_BME280.read_bme280")
+    def test_read_bme280(self, MockBME):
+        bme = MockBME()
         expected = 124.3
-        bh.read_bh1750.return_value = expected
-        readed = bh.read_bh1750()
+        bme.read_bme280.return_value = expected
+        readed = bme.read_bme280()
         self.assertIsNotNone(readed)
         self.assertTrue(type(readed).__name__ == "float")
 

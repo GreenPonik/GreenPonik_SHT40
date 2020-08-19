@@ -1,4 +1,5 @@
 adafruit-blinka>=5.2.3
+adafruit-circuitpython-bme280==2.3.3
 tox==3.18.0
 twine==3.2.0
 pytest==5.4.3

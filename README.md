@@ -1,26 +1,26 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BH1750&metric=alert_status)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BH1750)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BH1750&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BH1750)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BME280&metric=alert_status)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BME280)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BME280&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BME280)
 
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BH1750&metric=ncloc)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BH1750)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BH1750&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BH1750)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BME280&metric=ncloc)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BME280)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BME280&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BME280)
 
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BH1750&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BH1750)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BH1750&metric=security_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BH1750)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BH1750&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BH1750)
-
-
-![Upload Python Package](https://github.com/GreenPonik/GreenPonik_BH1750/workflows/Upload%20Python%20Package/badge.svg?event=release)
-![Python package](https://github.com/GreenPonik/GreenPonik_BH1750/workflows/Python%20package/badge.svg?event=push)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BME280&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BME280)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BME280&metric=security_rating)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BME280)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=GreenPonik_GreenPonik_BME280&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=GreenPonik_GreenPonik_BME280)
 
 
-## GreenPonik_BH1750.py Library for Raspberry pi
+![Upload Python Package](https://github.com/GreenPonik/GreenPonik_BME280/workflows/Upload%20Python%20Package/badge.svg?event=release)
+![Python package](https://github.com/GreenPonik/GreenPonik_BME280/workflows/Python%20package/badge.svg?event=push)
+
+
+## GreenPonik_BME280.py Library for Raspberry pi
 ---------------------------------------------------------
-This is the sample code for read light with BH1750 sensor.
+This is the sample code for read light with BME280 sensor.
 
 
 ## Table of Contents
 
-- [GreenPonik_BH1750.py Library for Raspberry pi](#GreenPonikBH1750py-library-for-raspberry-pi)
+- [GreenPonik_BME280.py Library for Raspberry pi](#GreenPonikBME280py-library-for-raspberry-pi)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Methods](#methods)
@@ -30,17 +30,17 @@ This is the sample code for read light with BH1750 sensor.
 
 ## Installation
 ```shell
-> git clone https://github.com/GreenPonik/GreenPonik_BH1750.git
-cd GreenPonik_BH1750
+> git clone https://github.com/GreenPonik/GreenPonik_BME280.git
+cd GreenPonik_BME280
 pip3 install -r requirements.txt
 
 or 
 
-> pip3 install greenponik-bh1750
+> pip3 install greenponik-bme280
 ```
 ```Python
 
-from GreenPonik_BH1750 import GreenPonik_BH1750
+from GreenPonik_BME280 import GreenPonik_BME280
 
 ```
 
@@ -50,20 +50,20 @@ from GreenPonik_BH1750 import GreenPonik_BH1750
 """
 Get light data
 """
-def read_bh1750():
+def read_bme280():
 
 ```
 
 ## Example
 ```Python
 import time
-from GreenPonik_BH1750 import GreenPonik_BH1750
+from GreenPonik_BME280 import GreenPonik_BME280
 
 if __name__ == "__main__":
     try:
-        bh = GreenPonik_BH1750()
+        bh = GreenPonik_BME280()
         while True:
-            lux = bh.read_bh1750()
+            lux = bh.read_bme280()
             print(lux)
             time.sleep(1)
     except Exception as e:
