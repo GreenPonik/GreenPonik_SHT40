@@ -32,11 +32,16 @@ class TestGreenPonik_BH1750(unittest.TestCase):
     @patch("GreenPonik_BME280.GreenPonik_BME280.read_bme280")
     def test_read_bme280(self, MockBME):
         bme = MockBME()
-        expected = 124.3
+        expected = [21.8, 62.3, 1014.5, 426.37]
         bme.read_bme280.return_value = expected
         readed = bme.read_bme280()
         self.assertIsNotNone(readed)
-        self.assertTrue(type(readed).__name__ == "float")
+        self.assertTrue(len(readed) == 4)
+        self.assertTrue(type(readed).__name__ == "list")
+        self.assertTrue(isinstance(readed[0], float))
+        self.assertTrue(isinstance(readed[1], float))
+        self.assertTrue(isinstance(readed[2], float))
+        self.assertTrue(isinstance(readed[3], float))
 
 
 if __name__ == "__main__":

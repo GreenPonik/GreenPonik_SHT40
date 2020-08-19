@@ -1,12 +1,12 @@
 import time
-from GreenPonik_BH1750 import GreenPonik_BH1750
+from GreenPonik_BME280 import GreenPonik_BME280
 
 if __name__ == "__main__":
     try:
-        bh = GreenPonik_BH1750()
+        bme = GreenPonik_BME280()
         while True:
-            lux = bh.read_bh1750()
-            print(lux)
+            data = bme.read_bme280()
+            print(data)
             time.sleep(1)
     except Exception as e:
         print('An exception occurred: {}'.format(e))

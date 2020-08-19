@@ -61,13 +61,14 @@ from GreenPonik_BME280 import GreenPonik_BME280
 
 if __name__ == "__main__":
     try:
-        bh = GreenPonik_BME280()
+        bme = GreenPonik_BME280()
         while True:
-            lux = bh.read_bme280()
-            print(lux)
+            data = bme.read_bme280()
+            print(data)
             time.sleep(1)
     except Exception as e:
         print('An exception occurred: {}'.format(e))
+
 ```
 
 ## Credits

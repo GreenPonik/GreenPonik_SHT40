@@ -12,49 +12,42 @@
 
 import board
 import busio
+import adafruit_bme280
+import time
 
 
 class GreenPonik_BME280:
-    # Constants taken from the datasheet
-    DEVICE = 0x23       # Default device I2C address
-    POWER_DOWN = 0x00   # No active state
-    POWER_ON = 0x01     # Power on
-    RESET = 0x07        # Reset data register value
-    # Start measurement at 4 lx resolution. Time typically 16ms.
-    CONTINUOUS_LOW_RES_MODE = 0x13
-    # Start measurement at 1 lx resolution. Time typically 120ms
-    CONTINUOUS_HIGH_RES_MODE_1 = 0x10
-    # Start measurement at 0.5 lx resolution. Time typically 120ms
-    CONTINUOUS_HIGH_RES_MODE_2 = 0x11
-    # Start measurement at 1 lx resolution. Time typically 120ms
-    # Device is automatically set to Power Down after measurement.
-    ONE_TIME_HIGH_RES_MODE_1 = 0x20
-    # Start measurement at 0.5 lx resolution. Time typically 120ms
-    # Device is automatically set to Power Down after measurement.
-    ONE_TIME_HIGH_RES_MODE_2 = 0x21
-    # Start measurement at 1 lx resolution. Time typically 120ms
-    # Device is automatically set to Power Down after measurement.
-    ONE_TIME_LOW_RES_MODE = 0x23
-
-    def _convert_to_number(self, data):
-        # Simple function to convert 2 bytes of data
-        # into a decimal number
-        return ((data[1] + (256 * data[0])) / 1.2)
-
-    def read_bme280(self, addr=DEVICE):
+    def read_bme280(self):
+        self._humidity_compensation = 13
+        self._temperature_compensation = 3
         try:
-            # bus = smbus.SMBus(0)    # Rev 1 Pi uses 0
-            # bus = smbus.SMBus(1)    # Rev 2 Pi uses 1
-            # data = bus.read_i2c_block_data(addr, self.ONE_TIME_HIGH_RES_MODE_2)
-            # lux = self._convertToNumber(data)
+            # Create library object using our Bus I2C port
             i2c = busio.I2C(board.SCL, board.SDA)
-            buffer = bytearray(1)
-            bh = i2c.readfrom_into(addr, buffer, self.ONE_TIME_HIGH_RES_MODE_2)
-            print(bh)
-            lux = bh
+            bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, 0x76)
 
-            print('light: %.3f lx' % lux)
-            return lux
+            # OR create library object using our Bus SPI port
+            # spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
+            # bme_cs = digitalio.DigitalInOut(board.D10)
+            # bme280 = adafruit_bme280.Adafruit_BME280_SPI(spi, bme_cs)
+
+            # Change this to match the location's pressure (hPa) at sea level
+            bme280.sea_level_pressure = 1013.25
+            bme280.mode = adafruit_bme280.MODE_NORMAL
+            bme280.standby_period = adafruit_bme280.STANDBY_TC_500
+            bme280.iir_filter = adafruit_bme280.IIR_FILTER_X16
+            bme280.overscan_pressure = adafruit_bme280.OVERSCAN_X16
+            bme280.overscan_humidity = adafruit_bme280.OVERSCAN_X1
+            bme280.overscan_temperature = adafruit_bme280.OVERSCAN_X2
+            # The sensor will need a moment to gather initial readings
+            time.sleep(1)
+            temperature = bme280.temperature - self._temperature_compensation
+            humidity = bme280.humidity + self._humidity_compensation
+            print("Temperature: %.3f C" % temperature)
+            print("Humidity: %.3f %%" % humidity)
+            print("Pressure: %.3f hPa" % bme280.pressure)
+            print("Altitude: %.3f meters" % bme280.altitude)
+            i2c.deinit()
+            return (temperature, humidity, bme280.pressure, bme280.altitude)
         except BaseException as e:
-            print('cannot read bh1750')
-            print('An exception occurred: {}'.format(e))
+            print("cannot read bme280")
+            print("An exception occurred: {}".format(e))
