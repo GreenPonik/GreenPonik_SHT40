@@ -50,7 +50,7 @@ from GreenPonik_BH1750 import GreenPonik_BH1750
 """
 Get light data
 """
-def read_BH1750():
+def read_bh1750():
 
 ```
 
@@ -60,11 +60,14 @@ import time
 from GreenPonik_BH1750 import GreenPonik_BH1750
 
 if __name__ == "__main__":
-    bh = GreenPonik_BH1750()
-    while True:
-        data = bh.read_bh1750()
-        print(data)
-        time.sleep(1)
+    try:
+        bh = GreenPonik_BH1750()
+        while True:
+            lux = bh.read_bh1750()
+            print(lux)
+            time.sleep(1)
+    except Exception as e:
+        print('An exception occurred: {}'.format(e))
 ```
 
 ## Credits

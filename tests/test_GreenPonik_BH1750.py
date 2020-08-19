@@ -32,12 +32,11 @@ class TestGreenPonik_BH1750(unittest.TestCase):
     @patch("GreenPonik_BH1750.GreenPonik_BH1750.read_bh1750")
     def test_read_bh1750(self, MockBH):
         bh = MockBH()
-        expected = [24.3, 12.3, 0.2]
+        expected = 124.3
         bh.read_bh1750.return_value = expected
         readed = bh.read_bh1750()
         self.assertIsNotNone(readed)
-        self.assertTrue(len(readed) == 3)
-        self.assertTrue(type(readed).__name__ == "list")
+        self.assertTrue(type(readed).__name__ == "float")
 
 
 if __name__ == "__main__":
