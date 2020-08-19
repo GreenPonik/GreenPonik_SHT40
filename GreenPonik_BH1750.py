@@ -35,7 +35,7 @@ class GreenPonik_BH1750:
     # Device is automatically set to Power Down after measurement.
     ONE_TIME_LOW_RES_MODE = 0x23
 
-    def _convertToNumber(self, data):
+    def _convert_to_number(self, data):
         # Simple function to convert 2 bytes of data
         # into a decimal number
         return ((data[1] + (256 * data[0])) / 1.2)
