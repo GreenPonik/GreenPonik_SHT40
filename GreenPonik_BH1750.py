@@ -51,4 +51,3 @@ class GreenPonik_BH1750:
         except BaseException as e:
             print('cannot read bh1750')
             print('An exception occurred: {}'.format(e))
-            pass
