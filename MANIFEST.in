@@ -1,3 +1,11 @@
+include *.txt
+include Doxyfile
+include LICENSE
+include tox.ini
+recursive-include example *.py
+recursive-include tests *.in
+recursive-include tests *.py
+
 include pyproject.toml
 
 # Include the README
@@ -12,15 +20,12 @@ include *.py
 
 # Include the data files
 recursive-include data *
-
 recursive-include example *.py
 recursive-include src *.py
-# added by check_manifest.py
-include tox.ini
-recursive-include tests *.py
 
-# added by check_manifest.py
-include Doxyfile
+include *.properties
+include *.yml
+include Makefile
 recursive-include docs *.bat
 recursive-include docs *.css
 recursive-include docs *.html
