@@ -3,19 +3,19 @@ import pathlib
 from setuptools import setup, find_packages
 
 # Package meta-data.
-NAME = "greenponik-tsl2561"
-DESCRIPTION = "Read TSL2561 through Python3 on raspberry pi"
-URL = "https://github.com/GreenPonik/GreenPonik_TSL2561"
+NAME = "greenponik-bh1750"
+DESCRIPTION = "Read BH1750 through Python3 on raspberry pi"
+URL = "https://github.com/GreenPonik/GreenPonik_BH1750"
 EMAIL = "contact@greenponik.com"
 AUTHOR = "GreenPonik SAS"
 REQUIRES_PYTHON = ">=3.6.0"
-VERSION = "0.0.3"
+VERSION = "0.0.1"
 
 # What packages are required for this module to be executed?
 REQUIRED = [
     # 'requests', 'maya', 'records',
     'adafruit-blinka',
-    'adafruit-circuitpython-tsl2561'
+    # 'adafruit-circuitpython-tsl2561'
 ]
 
 # What packages are optional?
@@ -56,8 +56,9 @@ setup(
     packages=find_packages(exclude=("tests", "docs")),
     python_requires=REQUIRES_PYTHON,
     project_urls={  # Optional
-        "Source": "https://github.com/GreenPonik/GreenPonik_TSL2561/",
-        "Bug Reports": "https://github.com/GreenPonik/GreenPonik_TSL2561/issues",
+        "Source": "https://github.com/GreenPonik/GreenPonik_BH1750/",
+        "Bug Reports": "https://github.com/GreenPonik/GreenPonik_BH1750/issues",
     },
-    keywords="GreenPonik hydroponics tsl2561 light reader python hardware diy iot raspberry pi",
+    keywords="GreenPonik hydroponics bh1750 \
+    light reader python hardware diy iot raspberry pi",
 )

@@ -28,13 +28,13 @@ sys.modules["board"] = BoardMock()
 sys.modules["busio"] = BusioMock()
 
 
-class TestGreenPonik_TSL2561(unittest.TestCase):
-    @patch("GreenPonik_TSL2561.GreenPonik_TSL2561.read_tsl2561")
-    def test_read_tsl2561(self, MockTSL):
-        tsl = MockTSL()
+class TestGreenPonik_BH1750(unittest.TestCase):
+    @patch("GreenPonik_BH1750.GreenPonik_BH1750.read_bh1750")
+    def test_read_bh1750(self, MockBH):
+        bh = MockBH()
         expected = [24.3, 12.3, 0.2]
-        tsl.read_tsl2561.return_value = expected
-        readed = tsl.read_tsl2561()
+        bh.read_bh1750.return_value = expected
+        readed = bh.read_bh1750()
         self.assertIsNotNone(readed)
         self.assertTrue(len(readed) == 3)
         self.assertTrue(type(readed).__name__ == "list")
