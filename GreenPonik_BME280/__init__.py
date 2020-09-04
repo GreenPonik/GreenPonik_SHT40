@@ -1,1 +1,1 @@
-from GreenPonik_BME280 import GreenPonik_BME280
+from GreenPonik_BME280.GreenPonik_BME280 import GreenPonik_BME280
