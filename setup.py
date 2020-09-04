@@ -53,7 +53,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages=find_packages(exclude=("tests", "docs")),
+    packages=find_packages(exclude=("docs")),
     python_requires=REQUIRES_PYTHON,
     project_urls={  # Optional
         "Source": "https://github.com/GreenPonik/GreenPonik_BM280/",
