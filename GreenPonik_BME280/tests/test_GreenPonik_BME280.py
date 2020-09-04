@@ -28,8 +28,8 @@ sys.modules["board"] = BoardMock()
 sys.modules["busio"] = BusioMock()
 
 
-class TestGreenPonik_BH1750(unittest.TestCase):
-    @patch("GreenPonik_BME280.GreenPonik_BME280.read_bme280")
+class Test_GreenPonik_BME280(unittest.TestCase):
+    @patch("GreenPonik_BME280.GreenPonik_BME280")
     def test_read_bme280(self, MockBME):
         bme = MockBME()
         expected = [21.8, 62.3, 1014.5, 426.37]
