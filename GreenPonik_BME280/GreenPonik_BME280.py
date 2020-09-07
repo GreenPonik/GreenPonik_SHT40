@@ -10,8 +10,9 @@
 ####################################################################
 """
 
-import board
-import busio
+from adafruit_extended_bus import ExtendedI2C as I2C
+# import board
+# import busio
 import adafruit_bme280
 import time
 
@@ -19,25 +20,32 @@ import time
 class GreenPonik_BME280:
 
     DEFAULT_ADDR = 0x76
+    DEFAULT_BUS = 1
 
-    def __init__(self, scl_pin=None, sda_pin=None):
-        self._scl_pin = scl_pin if None is not scl_pin else board.SCL
-        self._sda_pin = sda_pin if None is not sda_pin else board.SDA
-
-    @property
-    def scl_pin(self):
-        return self._scl_pin
+    def __init__(self, bus=None):
+        # self._scl_pin = scl_pin if None is not scl_pin else board.SCL
+        # self._scl_pin = scl_pin if None is not scl_pin else board.SCL
+        self._bus = bus if None is not bus else DEFAULT_BUS
 
     @property
-    def sda_pin(self):
-        return self._sda_pin
+    def bus(self):
+        return self._bus
+
+    # @property
+    # def scl_pin(self):
+    #     return self._scl_pin
+
+    # @property
+    # def sda_pin(self):
+    #     return self._sda_pin
 
     def read_bme280(self, addr=DEFAULT_ADDR):
         self._humidity_compensation = 13
         self._temperature_compensation = 3
         try:
             # Create library object using our Bus I2C port
-            i2c = busio.I2C(self._scl_pin, self._sda_pin)
+            # i2c = busio.I2C(self._scl_pin, self._sda_pin)
+            i2c = I2C(self._bus)
             bme280 = adafruit_bme280.Adafruit_BME280_I2C(
                 i2c,
                 self.DEFAULT_ADDR
