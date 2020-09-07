@@ -24,6 +24,14 @@ class GreenPonik_BME280:
         self._scl_pin = scl_pin if None is not scl_pin else board.SCL
         self._sda_pin = sda_pin if None is not sda_pin else board.SDA
 
+    @property
+    def scl_pin(self):
+        return self._scl_pin
+
+    @property
+    def sda_pin(self):
+        return self._sda_pin
+
     def read_bme280(self, addr=DEFAULT_ADDR):
         self._humidity_compensation = 13
         self._temperature_compensation = 3
