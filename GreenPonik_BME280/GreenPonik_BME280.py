@@ -17,13 +17,23 @@ import time
 
 
 class GreenPonik_BME280:
-    def read_bme280(self):
+
+    DEFAULT_ADDR = 0x76
+
+    def __init__(self, scl_pin=None, sda_pin=None):
+        self._scl_pin = scl_pin if not None else board.SCL
+        self._sda_pin = sda_pin if not None else board.SDA
+
+    def read_bme280(self, addr=DEFAULT_ADDR):
         self._humidity_compensation = 13
         self._temperature_compensation = 3
         try:
             # Create library object using our Bus I2C port
-            i2c = busio.I2C(board.SCL, board.SDA)
-            bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, 0x76)
+            i2c = busio.I2C(self._scl_pin, self._sda_pin)
+            bme280 = adafruit_bme280.Adafruit_BME280_I2C(
+                i2c,
+                self.DEFAULT_ADDR
+            )
 
             # OR create library object using our Bus SPI port
             # spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
