@@ -28,6 +28,10 @@ class GreenPonik_BME280:
         return self._bus
 
     def read_bme280(self, addr=DEFAULT_ADDR):
+        """
+        @brief Read bme280 raspberry pi i2c bus
+        Get temperatue, humidity, pressure, altitude
+        """
         self._humidity_compensation = 13
         self._temperature_compensation = 3
         try:
@@ -52,7 +56,7 @@ class GreenPonik_BME280:
                 time.sleep(1)
                 temperature = bme280.temperature - self._temperature_compensation
                 humidity = bme280.humidity + self._humidity_compensation
-                print("Temperature: %.3f C" % temperature)
+                print("Temperature: %.3f °c" % temperature)
                 print("Humidity: %.3f %%" % humidity)
                 print("Pressure: %.3f hPa" % bme280.pressure)
                 print("Altitude: %.3f meters" % bme280.altitude)
