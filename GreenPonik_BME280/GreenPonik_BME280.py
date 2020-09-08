@@ -25,7 +25,7 @@ class GreenPonik_BME280:
     def __init__(self, bus=None):
         # self._scl_pin = scl_pin if None is not scl_pin else board.SCL
         # self._scl_pin = scl_pin if None is not scl_pin else board.SCL
-        self._bus = bus if None is not bus else DEFAULT_BUS
+        self._bus = bus if None is not bus else self.DEFAULT_BUS
 
     @property
     def bus(self):
