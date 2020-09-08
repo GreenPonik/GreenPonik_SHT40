@@ -9,14 +9,14 @@ URL = "https://github.com/GreenPonik/GreenPonik_BM280"
 EMAIL = "contact@greenponik.com"
 AUTHOR = "GreenPonik SAS"
 REQUIRES_PYTHON = ">=3.6.0"
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 
 # What packages are required for this module to be executed?
 REQUIRED = [
     # 'requests', 'maya', 'records',
     'adafruit-blinka',
     'adafruit-circuitpython-bme280',
-    'adafruit-extended-bus==1.0.0',
+    'adafruit-extended-bus',
 ]
 
 # What packages are optional?
