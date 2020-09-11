@@ -23,8 +23,8 @@ sys.modules["fcntl"] = FCNTLMock()
 sys.modules["smbus"] = SmbusMock()
 
 
-class Test_GreenPonik_BME280(unittest.TestCase):
-    @patch("GreenPonik_BME280.GreenPonik_BME280")
+class Test_BME280(unittest.TestCase):
+    @patch("GreenPonik_BME280.BME280.BME280")
     def test_read_bme280(self, Mock):
         bme = Mock()
         expected = [21.8, 62.3, 1014.5, 426.37]

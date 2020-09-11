@@ -1,9 +1,9 @@
 import time
-from GreenPonik_BME280.GreenPonik_BME280 import GreenPonik_BME280
+from GreenPonik_BME280.BME280 import BME280
 
 if __name__ == "__main__":
     try:
-        bme = GreenPonik_BME280()
+        bme = BME280()
         while True:
             data = bme.read_bme280()
             print(data)

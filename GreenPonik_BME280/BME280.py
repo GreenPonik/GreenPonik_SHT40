@@ -15,7 +15,7 @@ import adafruit_bme280
 import time
 
 
-class GreenPonik_BME280:
+class BME280:
 
     DEFAULT_ADDR = 0x76
     DEFAULT_BUS = 1
