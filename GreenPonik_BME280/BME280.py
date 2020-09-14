@@ -20,8 +20,8 @@ class BME280:
     DEFAULT_ADDR = 0x76
     DEFAULT_BUS = 1
 
-    def __init__(self, bus=None):
-        self._bus = bus if None is not bus else self.DEFAULT_BUS
+    def __init__(self, bus=DEFAULT_BUS):
+        self._bus = bus
 
     @property
     def bus(self):
@@ -57,5 +57,4 @@ class BME280:
                 print("Altitude: %.3f meters" % bme280.altitude)
                 return temperature, humidity, bme280.pressure, bme280.altitude
         except BaseException as e:
-            print("cannot read bme280")
-            print("An exception occurred: {}".format(e))
+            raise ("cannot read bme280, An exception occurred: {}".format(e))

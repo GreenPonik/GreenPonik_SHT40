@@ -8,14 +8,13 @@ from unittest.mock import patch
 
 
 class SmbusMock():
+    # simultate the smbus method just for tests
     pass
 
 
 class FCNTLMock:
-    def __init__(self):
-        pass
-
     def ioctl(self):
+        # simultate the FCNTL.ioctl method just for tests
         pass
 
 
@@ -23,10 +22,10 @@ sys.modules["fcntl"] = FCNTLMock()
 sys.modules["smbus"] = SmbusMock()
 
 
-class Test_BME280(unittest.TestCase):
+class TestBME280(unittest.TestCase):
     @patch("GreenPonik_BME280.BME280.BME280")
-    def test_read_bme280(self, Mock):
-        bme = Mock()
+    def test_read_bme280(self, mock_bme280):
+        bme = mock_bme280()
         expected = [21.8, 62.3, 1014.5, 426.37]
         bme.read_bme280.return_value = expected
         readed = bme.read_bme280()
