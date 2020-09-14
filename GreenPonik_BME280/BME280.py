@@ -23,6 +23,7 @@ class BME280:
     def __init__(self, bus=DEFAULT_BUS, addr=DEFAULT_ADDR):
         self._bus = bus
         self._addr = addr
+        self._debug
 
     @property
     def bus(self):
@@ -31,6 +32,14 @@ class BME280:
     @property
     def address(self):
         return self._addr
+
+    @property
+    def debug(self):
+        return self._debug
+
+    @debug.setter
+    def debug(self, d):
+        self._debug = d
 
     def read_bme280(self):
         """
@@ -42,7 +51,6 @@ class BME280:
         try:
             with I2C(self._bus) as i2c:
                 bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, self._addr)
-
                 # Change this to match the location's
                 # pressure (hPa) at sea level
                 bme280.sea_level_pressure = 1013.25
@@ -56,10 +64,11 @@ class BME280:
                 time.sleep(1)
                 temperature = bme280.temperature - self._temperature_compensation
                 humidity = bme280.humidity + self._humidity_compensation
-                print("Temperature: %.3f °c" % temperature)
-                print("Humidity: %.3f %%" % humidity)
-                print("Pressure: %.3f hPa" % bme280.pressure)
-                print("Altitude: %.3f meters" % bme280.altitude)
+                if self._debug:
+                    print("Temperature: %.3f °c" % temperature)
+                    print("Humidity: %.3f %%" % humidity)
+                    print("Pressure: %.3f hPa" % bme280.pressure)
+                    print("Altitude: %.3f meters" % bme280.altitude)
                 return temperature, humidity, bme280.pressure, bme280.altitude
         except Exception as e:
             print("cannot read bme280, An exception occurred: {}".format(e))
