@@ -57,4 +57,4 @@ class BME280:
                 print("Altitude: %.3f meters" % bme280.altitude)
                 return temperature, humidity, bme280.pressure, bme280.altitude
         except BaseException as e:
-            raise ("cannot read bme280, An exception occurred: {}".format(e))
+            raise BaseException("cannot read bme280, An exception occurred: {}".format(e))
