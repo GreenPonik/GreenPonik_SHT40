@@ -20,14 +20,19 @@ class BME280:
     DEFAULT_ADDR = 0x76
     DEFAULT_BUS = 1
 
-    def __init__(self, bus=DEFAULT_BUS):
+    def __init__(self, bus=DEFAULT_BUS, addr=DEFAULT_ADDR):
         self._bus = bus
+        self._addr = addr
 
     @property
     def bus(self):
         return self._bus
 
-    def read_bme280(self, addr=DEFAULT_ADDR):
+    @property
+    def address(self):
+        return self._addr
+
+    def read_bme280(self):
         """
         @brief Read bme280 raspberry pi i2c bus
         Get temperatue, humidity, pressure, altitude
@@ -36,7 +41,7 @@ class BME280:
         self._temperature_compensation = 3
         try:
             with I2C(self._bus) as i2c:
-                bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, self.DEFAULT_ADDR)
+                bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, self._addr)
 
                 # Change this to match the location's
                 # pressure (hPa) at sea level
