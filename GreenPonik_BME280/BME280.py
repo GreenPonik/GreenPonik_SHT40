@@ -25,6 +25,17 @@ class BME280:
         self._addr = addr
         self._debug = False
 
+    def __enter__(self):
+        """Context manager enter function."""
+        # Just return this object so it can be used in a with statement, like
+        # with WaterPumpDriver(bus=1, addr=100) as driver:
+        #     # do stuff!
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        """Context manager exit function, ensures resources are cleaned up."""
+        return False  # Don't suppress exceptions.
+
     @property
     def bus(self):
         return self._bus
