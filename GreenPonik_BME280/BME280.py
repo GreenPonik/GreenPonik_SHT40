@@ -16,7 +16,7 @@ import time
 
 
 class BME280:
-
+    # TODO add compatibility to use it with the with statement
     DEFAULT_ADDR = 0x76
     DEFAULT_BUS = 1
 
