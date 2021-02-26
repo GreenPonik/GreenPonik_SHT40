@@ -15,3 +15,7 @@ venv/
 # due to using tox and pytest
 .tox
 .cache
+
+docs/**
+!docs/.gitkeep
+!docs/_config.yml
