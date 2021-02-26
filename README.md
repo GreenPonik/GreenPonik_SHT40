@@ -20,11 +20,9 @@ This is the sample code for read light with SHT40 sensor.
 
 ## Table of Contents
 
-- [GreenPonik_SHT40.py Library for Raspberry pi](#GreenPonikSHT40py-library-for-raspberry-pi)
-- [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Methods](#methods)
-- [Examples](#examples)
+- [Examples](#example)
 - [Credits](#credits)
 
 
