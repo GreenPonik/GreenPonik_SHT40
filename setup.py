@@ -3,19 +3,19 @@ import pathlib
 from setuptools import setup, find_packages
 
 # Package meta-data.
-NAME = "greenponik-bme280"
-DESCRIPTION = "Read BM280 through Python3 on raspberry pi"
-URL = "https://github.com/GreenPonik/GreenPonik_BM280"
+NAME = "greenponik-sht40"
+DESCRIPTION = "Read SHT40 through Python3 on raspberry pi"
+URL = "https://github.com/GreenPonik/GreenPonik_SHT40"
 EMAIL = "contact@greenponik.com"
 AUTHOR = "GreenPonik SAS"
-REQUIRES_PYTHON = ">=3.6.0"
-VERSION = "0.0.5"
+REQUIRES_PYTHON = ">=3.7.0"
+VERSION = "0.0.1"
 
 # What packages are required for this module to be executed?
 REQUIRED = [
     # 'requests', 'maya', 'records',
     'adafruit-blinka',
-    'adafruit-circuitpython-bme280',
+    'adafruit-circuitpython-sht40',
     'adafruit-extended-bus',
 ]
 
@@ -56,9 +56,9 @@ setup(
     packages=find_packages(exclude=("docs")),
     python_requires=REQUIRES_PYTHON,
     project_urls={  # Optional
-        "Source": "https://github.com/GreenPonik/GreenPonik_BM280/",
-        "Bug Reports": "https://github.com/GreenPonik/GreenPonik_BM280/issues",
+        "Source": "https://github.com/GreenPonik/GreenPonik_SHT40/",
+        "Bug Reports": "https://github.com/GreenPonik/GreenPonik_SHT40/issues",
     },
-    keywords="GreenPonik hydroponics bme280 \
+    keywords="GreenPonik hydroponics sht40 \
     light reader python hardware diy iot raspberry pi",
 )
