@@ -7,7 +7,7 @@ import unittest
 from unittest.mock import patch
 
 
-class SmbusMock():
+class SmbusMock:
     # simultate the smbus method just for tests
     pass
 
@@ -22,20 +22,18 @@ sys.modules["fcntl"] = FCNTLMock()
 sys.modules["smbus"] = SmbusMock()
 
 
-class TestBME280(unittest.TestCase):
-    @patch("GreenPonik_BME280.BME280.BME280")
-    def test_read_bme280(self, mock_bme280):
-        bme = mock_bme280()
-        expected = [21.8, 62.3, 1014.5, 426.37]
-        bme.read_bme280.return_value = expected
-        readed = bme.read_bme280()
+class TestSHT40(unittest.TestCase):
+    @patch("GreenPonik_SHT40.SHT40.SHT40")
+    def test_read_sht40(self, mock_sht40):
+        sht = mock_sht40()
+        expected = [21.8, 62.3]
+        sht.read_sht40.return_value = expected
+        readed = sht.read_sht40()
         self.assertIsNotNone(readed)
-        self.assertTrue(len(readed) == 4)
+        self.assertTrue(len(readed) == 2)
         self.assertTrue(type(readed).__name__ == "list")
         self.assertTrue(isinstance(readed[0], float))
         self.assertTrue(isinstance(readed[1], float))
-        self.assertTrue(isinstance(readed[2], float))
-        self.assertTrue(isinstance(readed[3], float))
 
 
 if __name__ == "__main__":

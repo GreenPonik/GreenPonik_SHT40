@@ -15,7 +15,7 @@ VERSION = "0.0.1"
 REQUIRED = [
     # 'requests', 'maya', 'records',
     'adafruit-blinka',
-    'adafruit-circuitpython-sht40',
+    'adafruit-circuitpython-sht4x',
     'adafruit-extended-bus',
 ]
 
